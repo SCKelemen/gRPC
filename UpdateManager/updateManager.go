@@ -77,3 +77,8 @@ func getStream(schedule UpdateSchedule, stream ReleaseStream) Release {
 		return schedule.Production
 	}
 }
+
+func New(url string) (UpdateManager, error) {
+	mgr := UpdateManager{Endpoint: url}
+	return mgr, nil
+}
